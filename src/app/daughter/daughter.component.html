@@ -1,1 +1,19 @@
-<p>daughter works!</p>
+<div class="row text-center d-flex flex-column justify-content-center align-items-center">
+  <div class="col">
+    <h1> Counter (daughter) </h1>
+    <h1>{{ counter }}</h1>
+  </div>
+
+  <div class="row mt-2" style="text-align: center;">
+    <div class="col">
+      <button (click)="duplicate()" type="button" class="btn btn-warning btn-lg">
+        Duplicate (*2)
+      </button>
+    </div>
+  </div>
+
+  <!-- <app-granddaughter
+      [counter]="counter"
+      (changeCounter)="resetGrandDaughter($event)"
+  ></app-granddaughter> -->
+</div>
