@@ -5,7 +5,6 @@ import { GranddaughterComponent } from './Counter/granddaughter/granddaughter.co
 import { Store } from '@ngrx/store';
 import { decrement, increment } from "./Counter/counter.actions";
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
