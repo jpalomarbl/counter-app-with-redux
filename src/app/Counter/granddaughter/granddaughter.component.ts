@@ -1,4 +1,6 @@
 import { Component, EventEmitter } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { resetAction } from '../counter.actions';
 
 @Component({
   selector: 'app-granddaughter',
@@ -13,10 +15,16 @@ export class GranddaughterComponent {
   counter!: number;
   changeCounter = new EventEmitter<number>();
 
-  constructor() {}
+  constructor(private store: Store<{ counter: number }>) {
+    this.store.subscribe((state) => {
+      this.counter = state.counter;
+    });
+  }
 
   reset(): void {
-    this.counter = 0;
-    this.changeCounter.emit(this.counter);
+    // this.counter = 0;
+    // this.changeCounter.emit(this.counter);
+
+    this.store.dispatch(resetAction());
   }
 }
