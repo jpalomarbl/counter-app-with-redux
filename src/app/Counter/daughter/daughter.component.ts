@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { GranddaughterComponent } from '../granddaughter/granddaughter.component';
 import { Store } from '@ngrx/store';
 import * as actions from '../counter.actions';
